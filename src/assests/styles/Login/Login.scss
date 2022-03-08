@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Ubuntu:wght@500&display=swap');
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+}
+// .login-container{
+//     position: relative;
+//     top: 35%;
+    
+// }
+.bg-login{
+    // background: url('../../images/Login/Ellipse\ 1.png');
+    // height: 100vh;
+    // width: 100%;
+    // background-size: cover;
+    // background-position: center;
+    // background-repeat: no-repeat;
+    background-color: #21638B;
+}
+.circle{
+    // position: absolute;
+    width: 1408px;
+    height: 1408px;
+   border-radius: 50%;
+    
+    background: rgba(205, 236, 255, 0.2); 
+}
+
+.login-form-left{
+    background-color: #fff;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    height: 100%;
+}
+.login-form-right{
+    background-color: #56ADE2;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    height: 675px;
+}
+
+.logo-img{
+    width: 308px;
+    height: auto;
+    padding: 35px 42px;
+    padding-top: 80px;
+}
+.loginform-bg{
+    background: url('../../images/Login/loginform-img-bg.png');
+    height: auto;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  
+}
+.input-field{
+    width: 85%;
+    margin: 0 auto;
+}
+.login-form-field{
+    width: 78%;
+    
+}
+// .loginform-bg-img{
+//     width: 100%;
+//     height: auto;
+// }
+// .input-field{
+//     width: 590px;
+// height: 65px;
+// }
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-radius: 34px;
+    border: 1px solid #DEDEDE;
+    box-sizing: border-box;
+    outline: none;
+    position: relative;
+    z-index: 2;
+  }
+  .label{
+      padding-left: 20px;
+  }
+  .signup-linktext{
+      margin: 0;
+      text-align: right;
+     
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 22px;
+      color: #ffffff;
+      text-decoration: none;
+  }
+  .signup-link{
+    display: flex;
+    justify-content: end;
+    padding-top: 8px;
+    padding-right: 12px;
+  }
+  .text-right{
+    text-align: right;
+  writing-mode: vertical-lr;
+//   transform: rotate(180deg);
+margin: 0;
+color: white;
+-webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+-webkit-text-stroke-width: 1px;
+-webkit-text-stroke-color: white;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: bold;
+font-size: 60px;
+
+  }
+  .system-img{
+      width: 100%;
+      height: 100%;
+  }
+
+  .systemdiv-img{
+    width: 772px;
+    /* padding-right: 53px; */
+    /* margin-right: 91px; */
+    // position: relative;
+    // right: 69%;
+    // top: -172px;
+    width: 725px;
+    /* padding-right: 53px; */
+    /* margin-right: 91px; */
+    position: relative;
+    right: 360px;
+    // top: -158px;
+    top: -158px;
+  }
+  .forgotpassword{
+      text-align: center;
+      text-decoration: none;
+  }
+  .forgot-div{
+    text-align: center;
+    padding-top: 15px;
+  }
+  .login-footer{
+    background: #56ADE2;
+    background-blend-mode:multiply;
+    display: flex;
+    position: relative;
+    z-index: 12;
+    bottom: 90px;
+// flex-wrap: wrap;
+  }
+.login-footercontent{
+    display: flex;
+    padding: 12px 5px;
+}
+.footer-name{
+    margin: 0;
+    font-size: 14px;
+    padding: 5px;
+    border-right: 2px solid #ffffff;
+    color: #ffffff;
+    padding-right:10px
+}
+// p:last-child{
+//    border: none;
+// }
+.image-div{
+    padding: 5px;
+}
+// input{
+//     height: 100%;
+//     width: 100%;
+// }
+@media screen and (max-width:600px) {
+    .container{
+        width: 100%;
+        max-width:100%;
+    }
+         .login-form-right{
+             display: none;
+         }   
+         .logo-img {
+            width: 247px;
+            height: auto;
+            padding: 35px 42px;
+            padding-top: 80px;
+        } 
+    .login-footer{
+        display: none;
+    }
+    .login-form-field {
+        width: 78%;
+        margin: 0 auto;
+    }
+}
