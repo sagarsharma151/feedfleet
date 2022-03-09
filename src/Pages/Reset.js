@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
   },
   btnLogin: {
     width: "100%",
-    marginTop: "39px !important",
+    marginTop: "20px !important",
     position: "absolute",
     zIndex: "1",
   },
@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
   },
 }));
-const Login = () => {
+const Reset = () => {
   const classes = useStyles();
   const footerdata = () =>
     data.map((data, i) => (
@@ -54,9 +54,9 @@ const Login = () => {
 
   return (
     <div className="bg-login">
-      <div className='circle'>
+      {/* <div className='circle'>
 
-    </div>
+    </div> */}
       <div className="container login-container">
         <div>
           <Grid container>
@@ -68,32 +68,27 @@ const Login = () => {
                 <div className="loginform-bg">
                   <div className="input-field">
                     <div className="login-form-field">
+                    <h4 className="forgot-heading">
+                    New password must be different from previously used
+password.
+                      </h4>
                       <form>
                         <label for="fname" className="label">
-                         Email
+                        New Password
                         </label>
                         <input type="text" id="fname" name="fname" />
                         <label for="lname" className="label">
-                       Password
+                        Confirm Password    
                         </label>
                         <input type="text" id="lname" name="lname" />
-                        <FormControlLabel
-                          className={classes.root}
-                          control={<Checkbox defaultChecked />}
-                          label="Remember me"
-                        />
-                        <br />
+                    
+                        <div className="forgot-div">
                         <Button
                           variant="contained"
                           className={classes.btnLogin}
                         >
                           Signin
                         </Button>
-                        <div className="forgot-div">
-                          {" "}
-                          <Link to="/forgot" className="forgotpassword">
-                            Forgot Password
-                          </Link>
                         </div>
                       </form>
                     </div>
@@ -103,7 +98,7 @@ const Login = () => {
             </Grid>
             <Grid item xs={12} md={3}>
               <div className="login-form-right">
-                <div className="signup-link">
+                {/* <div className="signup-link">
                   <div>
                     <Link to="/signup" className="signup-linktext">
                       Signup{" "}
@@ -112,9 +107,9 @@ const Login = () => {
                   <div>
                     <ArrowForwardIcon className={classes.arrow} />
                   </div>
-                </div>
+                </div> */}
                 <div>
-                  <h1 className="text-right">Login</h1>
+                  <h1 className="reset-text-right">Reset Password</h1>
                 </div>
                 <div className="systemdiv-img">
                   <img src={Systems} alt="" className="system-img" />
@@ -137,4 +132,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Reset;

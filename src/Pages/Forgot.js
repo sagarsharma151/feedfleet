@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
   },
 }));
-const Login = () => {
+const Forgot = () => {
   const classes = useStyles();
   const footerdata = () =>
     data.map((data, i) => (
@@ -47,66 +47,77 @@ const Login = () => {
           <img src={data.icon} style={{ width: "20px", height: "auto" }} />
         </div>
         <div>
-          <p className={`${data.name ? 'footer-name':''}`}>{data.name} </p>
+          <p className={`${data.name ? "footer-name" : ""}`}>{data.name} </p>
         </div>
       </div>
     ));
 
   return (
     <div className="bg-login">
-      <div className='circle'>
-
-    </div>
+      {/* <div className="circle"></div> */}
       <div className="container login-container">
         <div>
           <Grid container>
             <Grid xs={12} md={9}>
-              <div className="login-form-left">
+              <div className="forgot-form-left">
                 <div className="logo-img">
                   <Logo />
                 </div>
                 <div className="loginform-bg">
                   <div className="input-field">
                     <div className="login-form-field">
+                      <h4 className="forgot-heading">
+                        Enter the email address associated with your account,
+                        and we will email you a link to reset your password.
+                      </h4>
+                      <div className="form-div">
                       <form>
-                        <label for="fname" className="label">
-                         Email
+                        {/* <label for="fname" className="label">
+                          Full Name
                         </label>
-                        <input type="text" id="fname" name="fname" />
+                        <input type="text" id="fname" name="fname" /> */}
                         <label for="lname" className="label">
-                       Password
+                          Email
                         </label>
                         <input type="text" id="lname" name="lname" />
-                        <FormControlLabel
-                          className={classes.root}
-                          control={<Checkbox defaultChecked />}
-                          label="Remember me"
-                        />
-                        <br />
+                        {/* <label for="lname" className="label">
+                          Company Name
+                        </label>
+                        <input type="text" id="lname" name="lname" />
+                        <label for="lname" className="label">
+                          Password
+                        </label>
+                        <input type="text" id="lname" name="lname" />
+                        <label for="lname" className="label">
+                          Confirm Password
+                        </label>
+                        <input type="text" id="lname" name="lname" /> */}
+                       
                         <Button
                           variant="contained"
                           className={classes.btnLogin}
                         >
-                          Signin
+                          Signup
                         </Button>
                         <div className="forgot-div">
                           {" "}
-                          <Link to="/forgot" className="forgotpassword">
-                            Forgot Password
-                          </Link>
+                          <p className="forgotpassword">
+                            By signing up, you are creating a Feedfleet account
+                          </p>
                         </div>
                       </form>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </Grid>
             <Grid item xs={12} md={3}>
-              <div className="login-form-right">
+              <div className="forgot-form-right">
                 <div className="signup-link">
                   <div>
-                    <Link to="/signup" className="signup-linktext">
-                      Signup{" "}
+                    <Link to="/" className="signup-linktext">
+                      SignIn{" "}
                     </Link>
                   </div>
                   <div>
@@ -114,15 +125,15 @@ const Login = () => {
                   </div>
                 </div>
                 <div>
-                  <h1 className="text-right">Login</h1>
+                  <h1 className="forgot-text-right">Forget  Password</h1>
                 </div>
-                <div className="systemdiv-img">
+                <div className="systemdiv-forgotimg">
                   <img src={Systems} alt="" className="system-img" />
                 </div>
               </div>
             </Grid>
             <Grid item xs={12}>
-              <div className="login-footer">
+              <div className="forgot-footer">
                 {/* {data && data.map((data,i)=>{ */}
 
                 {footerdata()}
@@ -137,4 +148,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Forgot;

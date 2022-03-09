@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
   },
 }));
-const Login = () => {
+const Signup = () => {
   const classes = useStyles();
   const footerdata = () =>
     data.map((data, i) => (
@@ -61,7 +61,7 @@ const Login = () => {
         <div>
           <Grid container>
             <Grid xs={12} md={9}>
-              <div className="login-form-left">
+              <div className="signup-form-left">
                 <div className="logo-img">
                   <Logo />
                 </div>
@@ -70,11 +70,23 @@ const Login = () => {
                     <div className="login-form-field">
                       <form>
                         <label for="fname" className="label">
-                         Email
+                        Full Name
                         </label>
                         <input type="text" id="fname" name="fname" />
                         <label for="lname" className="label">
-                       Password
+                        Email
+                        </label>
+                        <input type="text" id="lname" name="lname" />
+                        <label for="lname" className="label">
+                        Company Name
+                        </label>
+                        <input type="text" id="lname" name="lname" />
+                        <label for="lname" className="label">
+                        Password
+                        </label>
+                        <input type="text" id="lname" name="lname" />
+                        <label for="lname" className="label">
+                        Confirm Password
                         </label>
                         <input type="text" id="lname" name="lname" />
                         <FormControlLabel
@@ -87,13 +99,13 @@ const Login = () => {
                           variant="contained"
                           className={classes.btnLogin}
                         >
-                          Signin
+                          Signup
                         </Button>
                         <div className="forgot-div">
                           {" "}
-                          <Link to="/forgot" className="forgotpassword">
-                            Forgot Password
-                          </Link>
+                          <p className="forgotpassword">
+                          By signing up, you are creating a Feedfleet account
+                          </p>
                         </div>
                       </form>
                     </div>
@@ -102,11 +114,11 @@ const Login = () => {
               </div>
             </Grid>
             <Grid item xs={12} md={3}>
-              <div className="login-form-right">
+              <div className="signup-form-right">
                 <div className="signup-link">
                   <div>
-                    <Link to="/signup" className="signup-linktext">
-                      Signup{" "}
+                    <Link to="/" className="signup-linktext">
+                      SignIn{" "}
                     </Link>
                   </div>
                   <div>
@@ -114,9 +126,9 @@ const Login = () => {
                   </div>
                 </div>
                 <div>
-                  <h1 className="text-right">Login</h1>
+                  <h1 className="text-right">Signup</h1>
                 </div>
-                <div className="systemdiv-img">
+                <div className="systemdiv-signupimg">
                   <img src={Systems} alt="" className="system-img" />
                 </div>
               </div>
@@ -137,4 +149,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signup;
